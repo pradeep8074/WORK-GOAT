@@ -1,0 +1,225 @@
+{
+  "test_timestamp": "2026-09-18 02:41:58 UTC",
+  "dataset": "Synthetic Cross-Bank AMLSim/Transaction Stream (seed=42, 3 Banks)",
+  "test_duration_seconds": 260.17,
+  "transactions_processed": {
+    "total_transactions": 500,
+    "currency": "INR",
+    "ground_truth_mules": 78,
+    "ground_truth_normal": 422,
+    "planted_mule_rings": 4,
+    "ring_types": [
+      "2 Cross-Bank Cycles",
+      "2 Fan-Out / Fan-In Dispersions"
+    ]
+  },
+  "nodes": {
+    "total_nodes": 150,
+    "node_type": "Bank Accounts (Unique institutional account IDs)",
+    "breakdown_by_bank": {
+      "Apex Bank": 50,
+      "Beacon Bank": 50,
+      "Crestline Bank": 50
+    },
+    "devices_as_nodes": "NOT CREATED AS GRAPH NODES (used in PSI matching)",
+    "ips_as_nodes": "NOT CREATED AS GRAPH NODES (used in PSI matching)"
+  },
+  "edges": {
+    "total_edges": 500,
+    "edge_type": "Directed Financial Transactions (IMPS/NEFT/RTGS)",
+    "cross_bank_edges": 353,
+    "intra_bank_edges": 147,
+    "edge_distribution_by_bank_pairs": {
+      "Apex <-> Beacon": 112,
+      "Apex <-> Crestline": 117,
+      "Beacon <-> Crestline": 124,
+      "Intra-Apex": 45,
+      "Intra-Beacon": 57,
+      "Intra-Crestline": 45
+    }
+  },
+  "suspicious_accounts": {
+    "rule_based_high_risk_txns": 62,
+    "rule_based_review_txns": 22,
+    "rule_based_high_risk_accounts": 72,
+    "threshold_rule_used": "Risk Score >= 65 (High Risk) from 6 deterministic AML rules (R1..R6)",
+    "fl_graphsage_test_flagged_accounts": 18,
+    "fl_threshold_used": "Decision Threshold tau = 0.55 on held-out 30 test accounts"
+  },
+  "cross_bank_connections": {
+    "total_cross_bank_transaction_edges": 353,
+    "breakdown_by_pair": {
+      "Apex_Beacon": 112,
+      "Apex_Crestline": 117,
+      "Beacon_Crestline": 124
+    },
+    "psi_matched_shared_entities": {
+      "Apex_Beacon": 23,
+      "Apex_Crestline": 24,
+      "Beacon_Crestline": 25,
+      "Tripartite_Apex_Beacon_Crestline": 4
+    }
+  },
+  "precision": {
+    "stage_2a_rules": {
+      "tp": 62,
+      "fp": 0,
+      "precision": 1.0,
+      "formula": "TP / (TP + FP) = 62 / (62 + 0) = 100.00%"
+    },
+    "stage_2b_gnn_held_out": {
+      "tp": 16,
+      "fp": 1,
+      "precision": 0.9412,
+      "formula": "TP / (TP + FP) = 16 / (16 + 1) = 94.12%"
+    },
+    "stage_2c2_federated_held_out": {
+      "tp": 14,
+      "fp": 4,
+      "precision": 0.7778,
+      "formula": "TP / (TP + FP) = 14 / (14 + 4) = 77.78%"
+    }
+  },
+  "recall": {
+    "stage_2a_rules": {
+      "tp": 62,
+      "fn": 16,
+      "recall": 0.7949,
+      "formula": "TP / (TP + FN) = 62 / (62 + 16) = 79.49%"
+    },
+    "stage_2b_gnn_held_out": {
+      "tp": 16,
+      "fn": 1,
+      "recall": 0.9412,
+      "formula": "TP / (TP + FN) = 16 / (16 + 1) = 94.12%"
+    },
+    "stage_2c2_federated_held_out": {
+      "tp": 14,
+      "fn": 3,
+      "recall": 0.8235,
+      "formula": "TP / (TP + FN) = 14 / (14 + 3) = 82.35%"
+    }
+  },
+  "latency_metrics": {
+    "rule_detection_500_txns": {
+      "measurements_count": 100,
+      "average_latency_ms": 14.94,
+      "p95_latency_ms": 24.19,
+      "p99_latency_ms": 29.75,
+      "unit": "ms"
+    },
+    "gnn_inference_150_nodes": {
+      "measurements_count": 100,
+      "average_latency_ms": 0.95,
+      "p95_latency_ms": 1.54,
+      "unit": "ms"
+    },
+    "psi_full_network_execution": {
+      "measurements_count": 10,
+      "average_latency_ms": 5692.86,
+      "p95_latency_ms": 5903.07,
+      "unit": "ms"
+    }
+  },
+  "psi_matches": {
+    "cryptographic_construction": "Diffie-Hellman Commutative Exponentiation over RFC 3526 2048-bit MODP Group 14",
+    "is_true_cryptographic_psi": true,
+    "total_entities_compared": 150,
+    "pairwise_matches": {
+      "Apex_Beacon": 23,
+      "Apex_Crestline": 24,
+      "Beacon_Crestline": 25
+    },
+    "tripartite_matches": 4,
+    "match_rate": "48.00%"
+  },
+  "federated_learning": {
+    "fl_rounds_executed": 10,
+    "local_epochs_per_round": 5,
+    "participating_banks": [
+      "Apex Bank",
+      "Beacon Bank",
+      "Crestline Bank"
+    ],
+    "parameters_per_model": 186,
+    "plaintext_model_update_size_bytes": 744,
+    "paillier_ciphertext_payload_size_bytes": 47616,
+    "paillier_modulus_bits": 1024,
+    "per_round_timing": {
+      "encryption_time_ms": 5041.46,
+      "homomorphic_aggregation_time_ms": 8.44,
+      "decryption_and_fedavg_time_ms": 4157.81
+    },
+    "held_out_30_test_f1": 80.0,
+    "held_out_30_test_accuracy": 76.67
+  },
+  "explainability": {
+    "shap_integration_status": "NOT MEASURED with KernelSHAP (Feature Attribution via GraphSAGE Weights + Deterministic Rule Engine)",
+    "sample_flagged_transaction": {
+      "transaction_id": "TXN-S2A-0036",
+      "sender": "ACC-APX-003",
+      "receiver": "ACC-BCN-008",
+      "amount_inr": 941731.22,
+      "risk_score": 75,
+      "status": "High Risk",
+      "explanation_generation_time_ms": 0.013,
+      "rule_attributions": [
+        {
+          "rule_id": "R1",
+          "rule_name": "FIU-IND Threshold Proximity",
+          "weight": 20,
+          "description": "Amount structured between ?7,50,000 and ?9,99,999 near regulatory reporting threshold."
+        },
+        {
+          "rule_id": "R2",
+          "rule_name": "Cross-Bank Boundary Crossing",
+          "weight": 15,
+          "description": "Fund displacement traverses institutional boundaries between distinct banking entities."
+        },
+        {
+          "rule_id": "R3",
+          "rule_name": "Fan-In Multi-Source Concentration",
+          "weight": 20,
+          "description": "Beneficiary account receives >= 3 inbound transfers within a 60-minute moving window."
+        },
+        {
+          "rule_id": "R5",
+          "rule_name": "Rapid Pass-Through Velocity",
+          "weight": 20,
+          "description": "Account receives funds and drains >= 70% outbound within a 60-minute temporal window."
+        }
+      ]
+    },
+    "top_gnn_feature_importance_factors": [
+      {
+        "rank": 1,
+        "feature": "Average Outbound Amount",
+        "importance_weight": 0.5999000072479248,
+        "role": "Top topological & behavioral indicator"
+      },
+      {
+        "rank": 2,
+        "feature": "Rapid Pass-Through Burst Count (<60m)",
+        "importance_weight": 0.5565999746322632,
+        "role": "Top topological & behavioral indicator"
+      },
+      {
+        "rank": 3,
+        "feature": "Average Inbound Amount",
+        "importance_weight": 0.5536999702453613,
+        "role": "Top topological & behavioral indicator"
+      }
+    ]
+  },
+  "banks": [
+    "Apex Bank",
+    "Beacon Bank",
+    "Crestline Bank"
+  ],
+  "notes": [
+    "All numbers are genuine measurements from the live Python execution environment.",
+    "Synthetic transaction stream uses seed=42 containing 500 transactions across 150 accounts.",
+    "Paillier cryptosystem uses 1024-bit modulus pure-Python implementation.",
+    "PSI operates over RFC 3526 2048-bit MODP Group 14 using true secret commutative exponentiation."
+  ]
+}

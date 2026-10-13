@@ -1,0 +1,44 @@
+[
+  {
+    "id": "BANK-A",
+    "name": "Bank A (Apex National Bank)",
+    "short_name": "Bank A",
+    "code": "APEX-IN",
+    "status": "Connected",
+    "transaction_count": 14820,
+    "active_alerts": 4,
+    "high_risk_accounts": 3,
+    "data_isolation": "ACTIVE",
+    "node_type": "Simulated Partner Node",
+    "environment": "Simulated bank environment",
+    "last_sync": "2026-09-17T10:30:00Z"
+  },
+  {
+    "id": "BANK-B",
+    "name": "Bank B (Beacon Mutual Trust)",
+    "short_name": "Bank B",
+    "code": "BCON-IN",
+    "status": "Connected",
+    "transaction_count": 11350,
+    "active_alerts": 3,
+    "high_risk_accounts": 2,
+    "data_isolation": "ACTIVE",
+    "node_type": "Simulated Partner Node",
+    "environment": "Simulated bank environment",
+    "last_sync": "2026-09-17T10:29:15Z"
+  },
+  {
+    "id": "BANK-C",
+    "name": "Bank C (Crestline Commercial)",
+    "short_name": "Bank C",
+    "code": "CRST-IN",
+    "status": "Connected",
+    "transaction_count": 9410,
+    "active_alerts": 5,
+    "high_risk_accounts": 4,
+    "data_isolation": "ACTIVE",
+    "node_type": "Simulated Partner Node",
+    "environment": "Simulated bank environment",
+    "last_sync": "2026-09-17T10:31:40Z"
+  }
+]

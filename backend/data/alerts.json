@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ALT-9041",
+    "account": "ACC-88319-B",
+    "bank": "Bank B",
+    "risk": "Critical",
+    "reason": "Unusual transaction velocity & multi-bank counterparty concentration",
+    "status": "Open",
+    "created": "2026-09-17 10:25:15 IST",
+    "rule_flag": "MOCK-VELOCITY-04",
+    "details": "Synthetic alert: Account received 4 rapid transfers totaling ₹37,45,000 across Bank A and Bank C within 90 minutes."
+  },
+  {
+    "id": "ALT-9042",
+    "account": "ACC-49102-A",
+    "bank": "Bank A",
+    "risk": "High",
+    "reason": "Rapid succession structuring near reporting thresholds",
+    "status": "Under Review",
+    "created": "2026-09-17 10:20:00 IST",
+    "rule_flag": "MOCK-STRUCT-01",
+    "details": "Synthetic alert: Transfer amount (₹9,85,000) positioned right below ₹10,00,000 regulatory reporting threshold."
+  },
+  {
+    "id": "ALT-9043",
+    "account": "ACC-71204-C",
+    "bank": "Bank C",
+    "risk": "High",
+    "reason": "Cross-bank activity & immediate pass-through funds",
+    "status": "Escalated",
+    "created": "2026-09-17 10:19:10 IST",
+    "rule_flag": "MOCK-LAYER-02",
+    "details": "Synthetic alert: Funds deposited from external source and immediately wired outward within 3 minutes."
+  },
+  {
+    "id": "ALT-9044",
+    "account": "ACC-33109-B",
+    "bank": "Bank B",
+    "risk": "Medium",
+    "reason": "Sudden volume surge from dormant entity",
+    "status": "Open",
+    "created": "2026-09-17 10:13:00 IST",
+    "rule_flag": "MOCK-DORMANT-03",
+    "details": "Synthetic alert: Inactive account for 180 days suddenly initiating outward NEFT transfers."
+  },
+  {
+    "id": "ALT-9045",
+    "account": "ACC-99214-C",
+    "bank": "Bank C",
+    "risk": "High",
+    "reason": "Multiple counterparties directing funds to newly designated beneficiary",
+    "status": "Under Review",
+    "created": "2026-09-17 10:00:22 IST",
+    "rule_flag": "MOCK-FAN-IN-07",
+    "details": "Synthetic alert: Star topology fan-in detected with common shared recipient."
+  },
+  {
+    "id": "ALT-9046",
+    "account": "ACC-88201-A",
+    "bank": "Bank A",
+    "risk": "Medium",
+    "reason": "First-time high value cross-institution transfer",
+    "status": "Open",
+    "created": "2026-09-17 09:16:45 IST",
+    "rule_flag": "MOCK-NEW-LINK-01",
+    "details": "Synthetic alert: Account established relationship with new Bank B account with ₹4,90,000 outbound transfer."
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "benchmark_metadata": {
+    "system": "G.O.A.T. Shield",
+    "evaluation_type": "Genuine Scalability Benchmark",
+    "seed": 42,
+    "environment": "Python 3.14 / NumPy / NetworkX / In-Memory",
+    "date": "2026-09-18"
+  },
+  "scales": [
+    {
+      "scale": "MVP",
+      "target_transactions": 500,
+      "actual_transactions": 500,
+      "nodes": 150,
+      "edges": 494,
+      "total_edges": 500,
+      "cross_bank_edges": 353,
+      "detection_throughput_tx_s": 2032.4,
+      "gnn_latency_p50_ms": 0.26,
+      "gnn_latency_p95_ms": 0.49,
+      "gnn_full_pipeline_p95_ms": 1.54,
+      "peak_memory_mb": 2.9,
+      "status": "Completed (100% Verified)"
+    },
+    {
+      "scale": "S1",
+      "target_transactions": 5000,
+      "actual_transactions": 5000,
+      "nodes": 1500,
+      "edges": 4994,
+      "total_edges": 5000,
+      "detection_throughput_tx_s": 1127.5,
+      "gnn_latency_p50_ms": 6.96,
+      "gnn_latency_p95_ms": 8.49,
+      "peak_memory_mb": 24.3,
+      "status": "Completed (100% Verified)"
+    },
+    {
+      "scale": "S2",
+      "target_transactions": 50000,
+      "actual_transactions": 50000,
+      "nodes": 15000,
+      "edges": 49993,
+      "total_edges": 50000,
+      "detection_throughput_tx_s": 2023.1,
+      "gnn_latency_p50_ms": 423.29,
+      "gnn_latency_p95_ms": 435.14,
+      "peak_memory_mb": 1761.9,
+      "status": "Completed (100% Verified)"
+    },
+    {
+      "scale": "S3",
+      "target_transactions": 100000,
+      "actual_transactions": 100000,
+      "nodes": 30000,
+      "edges": 99993,
+      "total_edges": 100000,
+      "detection_throughput_tx_s": 1988.1,
+      "gnn_latency_p50_ms": 1749.83,
+      "gnn_latency_p95_ms": 1882.48,
+      "peak_memory_mb": 6957.5,
+      "status": "Completed (100% Verified)"
+    }
+  ],
+  "architectural_insights": {
+    "dense_adjacency_scaling": "Dense matrix representation scales as O(N^2) memory (30K nodes = 3.6 GB dense matrix). For production scaling to millions of nodes, PyTorch Geometric / SciPy sparse adjacency (CSR/COO) and mini-batch neighbor sampling (NeighborLoader) are recommended.",
+    "rule_throughput_stability": "Rule engine throughput remains steady at ~1,100 to 2,000+ tx/s across all scales due to local account window indexing.",
+    "gnn_latency_scaling": "GNN inference scales quadratically with dense matrix multiplication from 0.26 ms (150 nodes) to 1.75 s (30,000 nodes)."
+  }
+}

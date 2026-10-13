@@ -1,0 +1,353 @@
+{
+  "round_0": {
+    "round": 0,
+    "accuracy": 0.3333,
+    "precision": 0.3846,
+    "recall": 0.2941,
+    "f1": 0.3333,
+    "loss": 0.8586,
+    "execution_time_ms": 0.0
+  },
+  "rounds_1_to_5": [
+    {
+      "round": 1,
+      "metrics": {
+        "accuracy": 0.3333,
+        "precision": 0.3636,
+        "recall": 0.2353,
+        "f1": 0.2857,
+        "loss": 0.8023,
+        "tp": 4,
+        "fp": 7,
+        "tn": 6,
+        "fn": 13
+      },
+      "telemetry": {
+        "round": 1,
+        "parameter_count": 186,
+        "participating_banks": [
+          "Apex Bank",
+          "Beacon Bank",
+          "Crestline Bank"
+        ],
+        "local_losses": {
+          "APEX": 0.8741,
+          "BEACON": 0.8899,
+          "CRESTLINE": 0.9353
+        },
+        "timing_breakdown_ms": {
+          "local_training": 7.41,
+          "paillier_encryption": 12422.0,
+          "homomorphic_aggregation": 8.48,
+          "decryption_and_fedavg": 4280.89,
+          "total_round_latency": 16719.58
+        },
+        "ciphertext_sample_fingerprints": {
+          "APEX": [
+            "0x197f0bcd...11303a82",
+            "0x15a2f8e2...cf271eda",
+            "0x69e52522...3b99f35f"
+          ],
+          "BEACON": [
+            "0x72d1ee07...df5f9a0d",
+            "0x5769a930...f5bf1b90",
+            "0x4d10e7a2...8830a8cd"
+          ],
+          "CRESTLINE": [
+            "0x3bdca8e5...7ab95393",
+            "0x413f916a...5653254c",
+            "0x8d7f824a...cba128de"
+          ]
+        },
+        "aggregate_sample_fingerprints": [
+          "0x300cc47f...37ad852a",
+          "0x3769f338...ff0052ac",
+          "0x1b25d80f...45bfab7b"
+        ],
+        "security_status": {
+          "paillier_modulus": "1024-bit Paillier modulus \u2014 prototype/demo configuration",
+          "aggregator_role": "HE Aggregation Server (Possesses PK only, cannot decrypt individual ciphertexts)",
+          "aggregation_law": "\u220f Enc(\u0394W_i) mod n\u00b2 = Enc(\u2211 \u0394W_i mod n)"
+        }
+      }
+    },
+    {
+      "round": 2,
+      "metrics": {
+        "accuracy": 0.4333,
+        "precision": 0.5,
+        "recall": 0.2353,
+        "f1": 0.32,
+        "loss": 0.761,
+        "tp": 4,
+        "fp": 4,
+        "tn": 9,
+        "fn": 13
+      },
+      "telemetry": {
+        "round": 2,
+        "parameter_count": 186,
+        "participating_banks": [
+          "Apex Bank",
+          "Beacon Bank",
+          "Crestline Bank"
+        ],
+        "local_losses": {
+          "APEX": 0.788,
+          "BEACON": 0.8122,
+          "CRESTLINE": 0.8515
+        },
+        "timing_breakdown_ms": {
+          "local_training": 9.39,
+          "paillier_encryption": 11762.08,
+          "homomorphic_aggregation": 7.05,
+          "decryption_and_fedavg": 4429.69,
+          "total_round_latency": 16208.79
+        },
+        "ciphertext_sample_fingerprints": {
+          "APEX": [
+            "0x517fa76f...d09f9aa4",
+            "0x245cd12e...6415d004",
+            "0x1168c0d3...35a9afef"
+          ],
+          "BEACON": [
+            "0x314bef81...4909026e",
+            "0x6a7390cc...064e986f",
+            "0x2b62b8a4...a6366197"
+          ],
+          "CRESTLINE": [
+            "0x33eaa5e4...669f0984",
+            "0x35ac7064...8c998336",
+            "0x531c9993...059f3395"
+          ]
+        },
+        "aggregate_sample_fingerprints": [
+          "0x2079a6c3...bdcbdb9b",
+          "0x3dfe8e9d...de6f8f54",
+          "0x3b4dd6a1...29520f8b"
+        ],
+        "security_status": {
+          "paillier_modulus": "1024-bit Paillier modulus \u2014 prototype/demo configuration",
+          "aggregator_role": "HE Aggregation Server (Possesses PK only, cannot decrypt individual ciphertexts)",
+          "aggregation_law": "\u220f Enc(\u0394W_i) mod n\u00b2 = Enc(\u2211 \u0394W_i mod n)"
+        }
+      }
+    },
+    {
+      "round": 3,
+      "metrics": {
+        "accuracy": 0.5333,
+        "precision": 0.7143,
+        "recall": 0.2941,
+        "f1": 0.4167,
+        "loss": 0.7291,
+        "tp": 5,
+        "fp": 2,
+        "tn": 11,
+        "fn": 12
+      },
+      "telemetry": {
+        "round": 3,
+        "parameter_count": 186,
+        "participating_banks": [
+          "Apex Bank",
+          "Beacon Bank",
+          "Crestline Bank"
+        ],
+        "local_losses": {
+          "APEX": 0.725,
+          "BEACON": 0.7532,
+          "CRESTLINE": 0.7885
+        },
+        "timing_breakdown_ms": {
+          "local_training": 9.27,
+          "paillier_encryption": 12262.14,
+          "homomorphic_aggregation": 5.88,
+          "decryption_and_fedavg": 3885.67,
+          "total_round_latency": 16164.1
+        },
+        "ciphertext_sample_fingerprints": {
+          "APEX": [
+            "0x59fe36ab...9411d3dd",
+            "0x4c5ee42d...4d6aadfb",
+            "0x1b3d0827...99993c41"
+          ],
+          "BEACON": [
+            "0x5d08b419...08e98893",
+            "0x49018dba...fe2ed76b",
+            "0x74a2c99e...4465fdfc"
+          ],
+          "CRESTLINE": [
+            "0x6295036c...5e4bd287",
+            "0x6807d1be...eaee58a3",
+            "0x6dec7af1...dcb22e61"
+          ]
+        },
+        "aggregate_sample_fingerprints": [
+          "0x4728983d...15f8c72f",
+          "0x46849a2f...396635fe",
+          "0x1e479dbc...d341253d"
+        ],
+        "security_status": {
+          "paillier_modulus": "1024-bit Paillier modulus \u2014 prototype/demo configuration",
+          "aggregator_role": "HE Aggregation Server (Possesses PK only, cannot decrypt individual ciphertexts)",
+          "aggregation_law": "\u220f Enc(\u0394W_i) mod n\u00b2 = Enc(\u2211 \u0394W_i mod n)"
+        }
+      }
+    },
+    {
+      "round": 4,
+      "metrics": {
+        "accuracy": 0.5667,
+        "precision": 0.8333,
+        "recall": 0.2941,
+        "f1": 0.4348,
+        "loss": 0.7045,
+        "tp": 5,
+        "fp": 1,
+        "tn": 12,
+        "fn": 12
+      },
+      "telemetry": {
+        "round": 4,
+        "parameter_count": 186,
+        "participating_banks": [
+          "Apex Bank",
+          "Beacon Bank",
+          "Crestline Bank"
+        ],
+        "local_losses": {
+          "APEX": 0.6784,
+          "BEACON": 0.7074,
+          "CRESTLINE": 0.7401
+        },
+        "timing_breakdown_ms": {
+          "local_training": 10.49,
+          "paillier_encryption": 13141.18,
+          "homomorphic_aggregation": 7.6,
+          "decryption_and_fedavg": 4029.32,
+          "total_round_latency": 17189.61
+        },
+        "ciphertext_sample_fingerprints": {
+          "APEX": [
+            "0x74a7ef48...86a2cfac",
+            "0x72d7b757...38afe104",
+            "0x529e31ed...8e687b47"
+          ],
+          "BEACON": [
+            "0x711e21fa...f392d8b5",
+            "0x5468307b...b1ec1b8a",
+            "0x1ad83f1e...d99988d0"
+          ],
+          "CRESTLINE": [
+            "0x75c261b8...cc8dfa75",
+            "0xdfab27c1...c46f8fc1",
+            "0x1cf3b1c5...75334554"
+          ]
+        },
+        "aggregate_sample_fingerprints": [
+          "0x1f36409b...933c5686",
+          "0x78feab88...51dbf236",
+          "0x2eaf0260...e92616e1"
+        ],
+        "security_status": {
+          "paillier_modulus": "1024-bit Paillier modulus \u2014 prototype/demo configuration",
+          "aggregator_role": "HE Aggregation Server (Possesses PK only, cannot decrypt individual ciphertexts)",
+          "aggregation_law": "\u220f Enc(\u0394W_i) mod n\u00b2 = Enc(\u2211 \u0394W_i mod n)"
+        }
+      }
+    },
+    {
+      "round": 5,
+      "metrics": {
+        "accuracy": 0.6333,
+        "precision": 0.875,
+        "recall": 0.4118,
+        "f1": 0.56,
+        "loss": 0.6846,
+        "tp": 7,
+        "fp": 1,
+        "tn": 12,
+        "fn": 10
+      },
+      "telemetry": {
+        "round": 5,
+        "parameter_count": 186,
+        "participating_banks": [
+          "Apex Bank",
+          "Beacon Bank",
+          "Crestline Bank"
+        ],
+        "local_losses": {
+          "APEX": 0.6424,
+          "BEACON": 0.6699,
+          "CRESTLINE": 0.7022
+        },
+        "timing_breakdown_ms": {
+          "local_training": 4.76,
+          "paillier_encryption": 12623.51,
+          "homomorphic_aggregation": 6.03,
+          "decryption_and_fedavg": 3848.97,
+          "total_round_latency": 16483.91
+        },
+        "ciphertext_sample_fingerprints": {
+          "APEX": [
+            "0x30cd6b25...3da0466d",
+            "0x72fd68b1...41d7be77",
+            "0x2e0cc003...c32da943"
+          ],
+          "BEACON": [
+            "0x3890ee82...fdfd9438",
+            "0x396cfc2b...0dceb02f",
+            "0x4aff0f01...004391e2"
+          ],
+          "CRESTLINE": [
+            "0x3b4811e6...6f710cb3",
+            "0x1e672f10...f853c173",
+            "0x69c19621...d94ba910"
+          ]
+        },
+        "aggregate_sample_fingerprints": [
+          "0xa50e86d2...f4aed1ee",
+          "0x74a62f49...e06ced49",
+          "0x45e092df...63dacd7e"
+        ],
+        "security_status": {
+          "paillier_modulus": "1024-bit Paillier modulus \u2014 prototype/demo configuration",
+          "aggregator_role": "HE Aggregation Server (Possesses PK only, cannot decrypt individual ciphertexts)",
+          "aggregation_law": "\u220f Enc(\u0394W_i) mod n\u00b2 = Enc(\u2211 \u0394W_i mod n)"
+        }
+      }
+    }
+  ],
+  "benchmark_comparison": {
+    "evaluation_node_count": 30,
+    "silo_isolated": {
+      "APEX": {
+        "bank_name": "Apex Bank",
+        "accuracy": 0.6333,
+        "precision": 0.875,
+        "recall": 0.4118,
+        "f1": 0.56,
+        "loss": 0.6858
+      },
+      "BEACON": {
+        "bank_name": "Beacon Bank",
+        "accuracy": 0.6333,
+        "precision": 0.8,
+        "recall": 0.4706,
+        "f1": 0.5926,
+        "loss": 0.6613
+      },
+      "CRESTLINE": {
+        "bank_name": "Crestline Bank",
+        "accuracy": 0.5667,
+        "precision": 0.75,
+        "recall": 0.3529,
+        "f1": 0.48,
+        "loss": 0.6827
+      }
+    },
+    "equal_weight_fedavg_rationale": "Equal-weight FedAvg is used because each participating synthetic bank currently contributes an equal number of training accounts (50 accounts each)."
+  }
+}
