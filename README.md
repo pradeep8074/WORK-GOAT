@@ -252,5 +252,5 @@ python -m unittest discover -s . -p "test_*.py"
 
 ## 11. Team & Project Credits
 - **Project**: G.O.A.T. Shield
-- **Event**: Scratch to Hack Grand Finale
+  
 - **Track**: AI/ML, Privacy-Preserving Computing, FinTech Security
