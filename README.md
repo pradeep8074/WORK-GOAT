@@ -1,6 +1,6 @@
 # G.O.A.T. Shield
 ### **Privacy-Preserving Federated Fraud Intelligence for Cross-Bank Mule Detection**
-*Scratch to Hack Grand Finale Submission — Clean Judge Evaluation Copy*
+
 
 ---
 
